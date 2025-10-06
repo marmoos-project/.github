@@ -1,0 +1,139 @@
+name: 🐛 User Report
+description: Report an issue, bug, or problem you've encountered
+title: "[BUG]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Report
+        Thank you for reporting an issue! Please provide detailed information to help us resolve it quickly.
+        
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: What issue or problem did you encounter?
+      placeholder: "Clear and concise description of the issue..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "I expected..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Instead, what happened was..."
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this issue?
+      options:
+        - Low - Minor inconvenience
+        - Medium - Affects functionality but has workaround
+        - High - Blocks important functionality
+        - Critical - System is unusable
+      default: 1
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this issue occur?
+      options:
+        - Once
+        - Sometimes
+        - Often
+        - Always
+      default: 1
+    validations:
+      required: true
+      
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Details about your environment
+      placeholder: |
+        - Operating System: [e.g., Windows 11, macOS 13, Ubuntu 22.04]
+        - Browser: [e.g., Chrome 120, Firefox 121, Safari 17]
+        - Application Version: [e.g., v1.2.3]
+        - Device: [e.g., Desktop, Mobile, Tablet]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages or Logs
+      description: Include any error messages, stack traces, or relevant logs
+      placeholder: "Paste error messages or logs here..."
+      render: shell
+    validations:
+      required: false
+      
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Videos
+      description: Add screenshots or videos that help illustrate the issue
+      placeholder: Drag and drop images or videos here
+    validations:
+      required: false
+      
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Have you found any workaround for this issue?
+      placeholder: "I found that..."
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any other relevant information
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to ensure this is not a duplicate
+          required: true
+        - label: I have provided all the information requested above
+          required: true

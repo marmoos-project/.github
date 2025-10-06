@@ -1,0 +1,199 @@
+name: 📊 Executive Level Long Running Task
+description: Track strategic initiatives and long-term projects
+title: "[INITIATIVE]: "
+labels: ["executive", "strategic", "long-running"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Executive Level Initiative
+        This template is for tracking strategic, long-term initiatives that require executive oversight.
+        
+  - type: input
+    id: initiative-name
+    attributes:
+      label: Initiative Name
+      description: Short, descriptive name for this initiative
+      placeholder: "Q4 2024 Digital Transformation"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: initiative-type
+    attributes:
+      label: Initiative Type
+      description: What type of initiative is this?
+      options:
+        - Strategic Initiative
+        - Transformation Project
+        - Infrastructure Upgrade
+        - Process Improvement
+        - Market Expansion
+        - Product Development
+        - Compliance & Governance
+        - Research & Development
+        - Other
+      default: 0
+    validations:
+      required: true
+      
+  - type: textarea
+    id: executive-summary
+    attributes:
+      label: Executive Summary
+      description: High-level overview of the initiative and its strategic importance
+      placeholder: "This initiative aims to..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: business-objectives
+    attributes:
+      label: Business Objectives
+      description: What are the key business objectives this initiative will achieve?
+      placeholder: |
+        1. Objective 1: [description and success metrics]
+        2. Objective 2: [description and success metrics]
+        3. Objective 3: [description and success metrics]
+    validations:
+      required: true
+      
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Define what is included and excluded from this initiative
+      placeholder: |
+        **In Scope:**
+        - Item 1
+        - Item 2
+        
+        **Out of Scope:**
+        - Item 1
+        - Item 2
+    validations:
+      required: true
+      
+  - type: textarea
+    id: key-stakeholders
+    attributes:
+      label: Key Stakeholders
+      description: Who are the key stakeholders and their roles?
+      placeholder: |
+        - Executive Sponsor: @username
+        - Program Manager: @username
+        - Business Owner: @username
+        - Technical Lead: @username
+    validations:
+      required: true
+      
+  - type: input
+    id: start-date
+    attributes:
+      label: Start Date
+      description: When does/did this initiative begin?
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+      
+  - type: input
+    id: target-completion
+    attributes:
+      label: Target Completion Date
+      description: When is this initiative expected to complete?
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: budget
+    attributes:
+      label: Budget & Resources
+      description: Budget allocation and resource requirements
+      placeholder: |
+        - Total Budget: $XXX,XXX
+        - Team Size: X FTEs
+        - External Resources: [vendors, consultants, etc.]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: milestones
+    attributes:
+      label: Key Milestones
+      description: Major milestones and checkpoints
+      placeholder: |
+        - [ ] Milestone 1: [description] - Target: YYYY-MM-DD
+        - [ ] Milestone 2: [description] - Target: YYYY-MM-DD
+        - [ ] Milestone 3: [description] - Target: YYYY-MM-DD
+    validations:
+      required: true
+      
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success Criteria & KPIs
+      description: How will success be measured?
+      placeholder: |
+        - KPI 1: [metric and target]
+        - KPI 2: [metric and target]
+        - KPI 3: [metric and target]
+    validations:
+      required: true
+      
+  - type: textarea
+    id: risks
+    attributes:
+      label: Key Risks & Dependencies
+      description: Major risks and dependencies that could impact the initiative
+      placeholder: |
+        **Risks:**
+        - Risk 1: [description and mitigation]
+        - Risk 2: [description and mitigation]
+        
+        **Dependencies:**
+        - Dependency 1: [description]
+        - Dependency 2: [description]
+    validations:
+      required: false
+      
+  - type: textarea
+    id: status-updates
+    attributes:
+      label: Status Updates
+      description: Regular status updates will be added here as comments
+      placeholder: |
+        This section is for tracking progress. Please add status updates as comments on this issue.
+        
+        **Status Update Template:**
+        - Date: YYYY-MM-DD
+        - Overall Status: 🟢 On Track / 🟡 At Risk / 🔴 Off Track
+        - Progress: [brief summary]
+        - Achievements: [completed items]
+        - Next Steps: [upcoming activities]
+        - Issues/Blockers: [current challenges]
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Strategic priority level
+      options:
+        - P0 - Critical (Board Level)
+        - P1 - High (Executive Level)
+        - P2 - Medium (Department Level)
+        - P3 - Low (Team Level)
+      default: 1
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any additional information, documents, or references
+      placeholder: Links to strategic documents, market research, etc.
+    validations:
+      required: false
