@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/orgs/marmoos-project/discussions
+    about: For questions and general discussions, please use GitHub Discussions
+  - name: 📚 Documentation
+    url: https://github.com/marmoos-project
+    about: Check our documentation for guides and examples

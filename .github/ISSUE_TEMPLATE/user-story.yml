@@ -1,0 +1,121 @@
+name: 🎯 User Story
+description: Create a user story with optional mermaid workflow diagram
+title: "[USER STORY]: "
+labels: ["user-story", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story Template
+        Please fill out the information below to create a comprehensive user story.
+        
+  - type: input
+    id: user-type
+    attributes:
+      label: User Type
+      description: Who is this user story for? (e.g., end user, admin, developer)
+      placeholder: "As a [type of user]..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: user-goal
+    attributes:
+      label: User Goal
+      description: What does the user want to accomplish?
+      placeholder: "I want to [goal/action]..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: user-benefit
+    attributes:
+      label: User Benefit
+      description: Why does the user want this? What value does it provide?
+      placeholder: "So that [reason/benefit]..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What conditions must be met for this story to be considered complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+      
+  - type: textarea
+    id: workflow-description
+    attributes:
+      label: Workflow Description
+      description: Describe the workflow or process flow (optional - used to generate mermaid diagram)
+      placeholder: |
+        Example:
+        1. User opens the application
+        2. User clicks on settings
+        3. System displays configuration options
+        4. User updates preferences
+        5. System saves changes
+    validations:
+      required: false
+      
+  - type: textarea
+    id: mermaid-diagram
+    attributes:
+      label: Mermaid Workflow Diagram (Optional)
+      description: |
+        Add a mermaid diagram to visualize the workflow. 
+        See [Mermaid documentation](https://mermaid.js.org/) for syntax help.
+        
+        **Tip:** You can generate this from your workflow description above:
+        - For sequential flows, use flowchart syntax
+        - For user interactions, use sequence diagrams
+        - For state changes, use state diagrams
+      placeholder: |
+        ```mermaid
+        flowchart TD
+            Start[User Opens App] --> Settings[Click Settings]
+            Settings --> Display[Display Config Options]
+            Display --> Update[Update Preferences]
+            Update --> Save[System Saves Changes]
+            Save --> End[Confirmation Message]
+        ```
+      render: markdown
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or examples
+      placeholder: Any additional information that might be helpful
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority of this user story?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+      default: 1
+    validations:
+      required: true
+      
+  - type: input
+    id: story-points
+    attributes:
+      label: Story Points (Optional)
+      description: Estimated effort (e.g., 1, 2, 3, 5, 8, 13)
+      placeholder: "5"
+    validations:
+      required: false
