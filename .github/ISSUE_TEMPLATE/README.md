@@ -41,6 +41,7 @@ This repository contains organization-wide issue templates for the marmoos-proje
 - Expected vs actual behavior
 - Severity and frequency assessment
 - Environment information
+- **Component selection**: Mobile App (iOS/Android), Company Website, Backend/API, Database, etc.
 - Error messages and logs
 - Screenshots/videos support
 
@@ -49,15 +50,20 @@ This repository contains organization-wide issue templates for the marmoos-proje
 ---
 
 ### 📊 Executive Level Long Running Task
-**Purpose**: Track strategic initiatives and long-term projects
+**Purpose**: Track strategic initiatives and long-term projects for early-stage, innovative ventures
 
 **Key Features**:
-- Executive summary and business objectives
+- Initiative types suited for startups: mobile app development, partner acquisition, business planning, technology evaluation
+- Executive summary and business objectives tailored for early-stage ventures
 - Scope definition (in/out of scope)
-- Stakeholder identification
-- Timeline with milestones
-- Budget and resource allocation
-- Success criteria and KPIs
+- Stakeholder identification including partners and resource needs
+- Timeline with milestones for product development, partner onboarding, and fundraising
+- Budget breakdown for development, infrastructure, and operations
+- Success criteria with product, business, and technical KPIs
+- Risk management for early-stage challenges (technical, resource, financial, market)
+- Status update framework for tracking progress
+
+**Use When**: You're initiating a strategic initiative in an early-stage project such as mobile app development, finding technical partners, technology evaluation, or business plan development
 - Risk and dependency tracking
 - Regular status update framework
 

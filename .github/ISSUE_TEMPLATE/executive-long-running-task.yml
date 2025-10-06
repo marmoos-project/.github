@@ -1,5 +1,5 @@
 name: 📊 Executive Level Long Running Task
-description: Track strategic initiatives and long-term projects
+description: Track strategic initiatives and long-term projects for early-stage, innovative ventures
 title: "[INITIATIVE]: "
 labels: ["executive", "strategic", "long-running"]
 body:
@@ -7,14 +7,15 @@ body:
     attributes:
       value: |
         ## Executive Level Initiative
-        This template is for tracking strategic, long-term initiatives that require executive oversight.
+        This template is for tracking strategic, long-term initiatives in early-stage, innovative projects.
+        Suitable for mobile app development, finding partners, business planning, and technology evaluation.
         
   - type: input
     id: initiative-name
     attributes:
       label: Initiative Name
       description: Short, descriptive name for this initiative
-      placeholder: "Q4 2024 Digital Transformation"
+      placeholder: "Mobile App MVP Development or Partner Acquisition Q1 2024"
     validations:
       required: true
       
@@ -24,14 +25,15 @@ body:
       label: Initiative Type
       description: What type of initiative is this?
       options:
+        - Product Development (Mobile App)
+        - Technology Evaluation & Selection
+        - Partner & Resource Acquisition
+        - Business Plan Development
+        - Market Research & Validation
+        - Fundraising & Investment
+        - Infrastructure Setup
+        - Team Building & Recruitment
         - Strategic Initiative
-        - Transformation Project
-        - Infrastructure Upgrade
-        - Process Improvement
-        - Market Expansion
-        - Product Development
-        - Compliance & Governance
-        - Research & Development
         - Other
       default: 0
     validations:
@@ -52,9 +54,12 @@ body:
       label: Business Objectives
       description: What are the key business objectives this initiative will achieve?
       placeholder: |
-        1. Objective 1: [description and success metrics]
-        2. Objective 2: [description and success metrics]
-        3. Objective 3: [description and success metrics]
+        Examples for early-stage projects:
+        1. Complete mobile app MVP with core features by [date]
+        2. Identify and onboard 3 technical partners/contractors
+        3. Validate business model with 100 potential customers
+        4. Secure seed funding of $XXX,XXX
+        5. Launch beta version to first 50 users
     validations:
       required: true
       
@@ -77,13 +82,22 @@ body:
   - type: textarea
     id: key-stakeholders
     attributes:
-      label: Key Stakeholders
-      description: Who are the key stakeholders and their roles?
+      label: Key Stakeholders & Partners
+      description: Who are the key stakeholders, team members, and potential partners?
       placeholder: |
-        - Executive Sponsor: @username
-        - Program Manager: @username
-        - Business Owner: @username
-        - Technical Lead: @username
+        **Internal Team:**
+        - Founder/CEO: @username
+        - Technical Lead: @username or [To Be Hired]
+        - Business Development: @username
+        
+        **Partners & Resources:**
+        - Mobile Development Partner: [Searching/Identified/Contracted]
+        - Backend Development: [In-house/Partner/TBD]
+        - Design Resources: [Freelancer/Agency/TBD]
+        
+        **Advisors/Mentors:**
+        - Technical Advisor: [Name/TBD]
+        - Business Advisor: [Name/TBD]
     validations:
       required: true
       
@@ -109,11 +123,21 @@ body:
     id: budget
     attributes:
       label: Budget & Resources
-      description: Budget allocation and resource requirements
+      description: Budget allocation and resource requirements for early-stage venture
       placeholder: |
-        - Total Budget: $XXX,XXX
-        - Team Size: X FTEs
-        - External Resources: [vendors, consultants, etc.]
+        **Budget Breakdown:**
+        - Mobile App Development: $XX,XXX (contractor/agency)
+        - Backend Infrastructure: $X,XXX/month (cloud services)
+        - Design & UX: $X,XXX
+        - Marketing/Customer Acquisition: $X,XXX
+        - Legal & Compliance: $X,XXX
+        - Total Initial Budget: $XXX,XXX
+        
+        **Resource Needs:**
+        - Full-time: X people
+        - Part-time/Contractors: X people
+        - Technical partners: [list needs]
+        - Funding status: [Bootstrapped/Seeking/Secured]
     validations:
       required: false
       
@@ -121,11 +145,16 @@ body:
     id: milestones
     attributes:
       label: Key Milestones
-      description: Major milestones and checkpoints
+      description: Major milestones and checkpoints for early-stage project
       placeholder: |
-        - [ ] Milestone 1: [description] - Target: YYYY-MM-DD
-        - [ ] Milestone 2: [description] - Target: YYYY-MM-DD
-        - [ ] Milestone 3: [description] - Target: YYYY-MM-DD
+        - [ ] Technology Stack Selection - Target: YYYY-MM-DD
+        - [ ] Partner/Contractor Onboarding - Target: YYYY-MM-DD
+        - [ ] Mobile App MVP Development - Target: YYYY-MM-DD
+        - [ ] Backend Infrastructure Setup - Target: YYYY-MM-DD
+        - [ ] Beta Launch - Target: YYYY-MM-DD
+        - [ ] First Customer Acquisition - Target: YYYY-MM-DD
+        - [ ] Business Plan Completion - Target: YYYY-MM-DD
+        - [ ] Funding Round Close - Target: YYYY-MM-DD
     validations:
       required: true
       
@@ -133,11 +162,23 @@ body:
     id: success-criteria
     attributes:
       label: Success Criteria & KPIs
-      description: How will success be measured?
+      description: How will success be measured for this early-stage initiative?
       placeholder: |
-        - KPI 1: [metric and target]
-        - KPI 2: [metric and target]
-        - KPI 3: [metric and target]
+        **Product KPIs:**
+        - Mobile app functionality: X core features completed
+        - App performance: < X seconds load time
+        - Platform coverage: iOS and/or Android
+        
+        **Business KPIs:**
+        - User acquisition: X beta users
+        - Customer validation: X interviews/surveys completed
+        - Partnership: X partners/contractors secured
+        - Funding: $XXX,XXX raised
+        
+        **Technical KPIs:**
+        - Technology evaluation: X platforms assessed
+        - Development velocity: X story points per sprint
+        - Code quality: X% test coverage
     validations:
       required: true
       
@@ -145,15 +186,20 @@ body:
     id: risks
     attributes:
       label: Key Risks & Dependencies
-      description: Major risks and dependencies that could impact the initiative
+      description: Major risks and dependencies for early-stage project
       placeholder: |
         **Risks:**
-        - Risk 1: [description and mitigation]
-        - Risk 2: [description and mitigation]
+        - Technical: Mobile platform choice may limit features [Mitigation: Multi-platform strategy]
+        - Resource: Difficulty finding qualified developers [Mitigation: Multiple recruitment channels]
+        - Financial: Budget overrun on development [Mitigation: Phased approach, MVP focus]
+        - Market: Product-market fit not validated [Mitigation: Early customer discovery]
+        - Partnership: Key partner delays delivery [Mitigation: Backup options identified]
         
         **Dependencies:**
-        - Dependency 1: [description]
-        - Dependency 2: [description]
+        - Technology evaluation must complete before development starts
+        - Backend infrastructure needed before mobile app integration
+        - Partner contracts must be signed before work begins
+        - Business plan required for fundraising activities
     validations:
       required: false
       

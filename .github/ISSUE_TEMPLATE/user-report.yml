@@ -90,6 +90,25 @@ body:
     validations:
       required: false
       
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component is affected by this issue?
+      options:
+        - Mobile App (iOS)
+        - Mobile App (Android)
+        - Company Website
+        - Backend/API
+        - Database
+        - Authentication/Authorization
+        - Payment System
+        - Third-party Integration
+        - Other
+      default: 0
+    validations:
+      required: false
+      
   - type: textarea
     id: error-messages
     attributes:
