@@ -1,0 +1,38 @@
+# Marmoos AI Agent Configuration
+# Used by CrewAI / OpenDevin orchestrator
+
+pm_agent:
+  model: gpt-5
+  role: "Project Manager"
+  goal: "Decompose GitHub issues into actionable sub-stories and assign tasks."
+  context: ai/context.md
+  tools: [github, planning]
+  outputs: [subissues, summaries]
+  triggers: ["issue_created"]
+
+design_agent:
+  model: gpt-5
+  role: "UX / Design Specialist"
+  goal: "Create mockups and UX flows for Marmoos apps and sites."
+  context: marmoos_app/ai/context.md
+  tools: [uxmagic, figma, midjourney]
+  outputs: [mockups, design_specs]
+  triggers: ["issue_tag:design", "component:app", "component:site"]
+
+python_agent:
+  model: gpt-5
+  role: "Backend Developer"
+  goal: "Implement Python components (PySide6, FastAPI) and handle code reviews."
+  context: marmoos_backend/ai/context.md
+  tools: [openai, pytest, github]
+  outputs: [code, pr]
+  triggers: ["issue_tag:backend"]
+
+devops_agent:
+  model: gpt-5
+  role: "DevOps Engineer"
+  goal: "Automate builds, Docker, CI/CD pipelines, and local K8s deployments."
+  context: marmoos_backend/ai/context.md
+  tools: [terraform, docker, github_actions, ansible]
+  outputs: [ci_config, deployments]
+  triggers: ["issue_tag:devops"]
